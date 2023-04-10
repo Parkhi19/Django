@@ -18,7 +18,11 @@ posts = [
 
 
 def home(request):
-    return render(request, 'blog/home.html')
+    # dictionary named context
+    context = {
+        'posts' :posts
+    }
+    return render(request, 'blog/home.html', context)
 
 
 def about(request):
